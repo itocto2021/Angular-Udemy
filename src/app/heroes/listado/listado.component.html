@@ -1,0 +1,19 @@
+<p>listado de Hermanos!</p>
+
+<div *ngIf = "hermanoBorrado.length > 0; else noBorrado">
+    <h3>Hermano Borrado => <small> {{hermanoBorrado}} </small></h3>
+    
+</div>
+
+<ng-template #noBorrado> 
+    <h3 style="color: red;"> No hay hermnao borrador</h3>>
+</ng-template>
+
+<button (click) = 'borrarHermano()'> Limpiar Hermano</button>
+
+
+<ul>
+    <li *ngFor="let hermano of hermanos; let i = index"> 
+        {{i + 1}} - {{ hermano }}
+    </li>
+</ul>
